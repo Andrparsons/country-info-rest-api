@@ -24,13 +24,22 @@ class IndexPage extends Component {
     return (
       <Layout>
         <SEO title="Home" />
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <Image />
+        <div>
+          {this.state.loading ? (
+            <p>Hang on, Loading...</p>
+          ) : this.state.error ? (
+            <p>Something has gone wrong</p>
+          ) : (
+            <>
+              <p>It works!</p>
+              <ul>
+                {this.state.countries.map(country => (
+                  <li>{country.name}</li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
-        <Link to="/page-2/">Go to page 2</Link>
       </Layout>
     )
   }
