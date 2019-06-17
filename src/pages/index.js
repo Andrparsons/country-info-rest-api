@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import axios from "axios"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import CountryCard from "../components/country-card"
 
 class IndexPage extends Component {
   constructor(props) {
@@ -32,11 +32,9 @@ class IndexPage extends Component {
           ) : (
             <>
               <p>It works!</p>
-              <ul>
-                {this.state.countries.map(country => (
-                  <li>{country.name}</li>
-                ))}
-              </ul>
+              {this.state.countries.map(country => (
+                <CountryCard country={country} />
+              ))}
             </>
           )}
         </div>
