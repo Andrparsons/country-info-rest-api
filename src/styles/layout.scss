@@ -1,2 +1,9 @@
 @import "normalize";
 @import "themes";
+@import "header";
+@import "country-card";
+
+body {
+  color: var(--text-colour);
+  background-color: var(--background-colour);
+}

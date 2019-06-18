@@ -1,6 +1,8 @@
+//colours
+
 :root {
-  --background-colour: hsl(0, 0, 98%);
-  --element-colour: hsl(209, 23%, 22%);
+  --background-colour: hsl(0, 0%, 98%);
+  --element-colour: hsl(0, 0%, 100%);
   --text-colour: hsl(200, 15%, 8%);
   --input-colour: hsl(0, 0%, 52%);
 }
@@ -10,4 +12,11 @@
   --element-colour: hsl(209, 23%, 22%);
   --text-colour: hsl(0, 0%, 100%);
   --input-colour: hsl(0, 0%, 100%);
+}
+
+//fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,600,800&display=swap");
+
+body {
+  font-family: "Nunito Sans", sans-serif;
 }
