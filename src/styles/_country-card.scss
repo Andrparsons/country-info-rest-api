@@ -1,3 +1,13 @@
-.card {
-  background-color: var(--element-colour);
+.country {
+  &-card {
+    background-color: var(--element-colour);
+    width: 16.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 0.625rem 0 rgba(0, 0, 0, 0.075);
+  }
+  &-flag {
+    height: 10rem;
+    background-size: cover;
+  }
 }

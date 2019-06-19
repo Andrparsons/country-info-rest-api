@@ -7,3 +7,13 @@ body {
   color: var(--text-colour);
   background-color: var(--background-colour);
 }
+
+.layout {
+  max-width: 100vw;
+}
+
+main {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}

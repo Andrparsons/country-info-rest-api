@@ -24,20 +24,19 @@ class IndexPage extends Component {
     return (
       <Layout>
         <SEO title="Home" />
-        <div>
+        <>
           {this.state.loading ? (
             <p>Hang on, Loading...</p>
           ) : this.state.error ? (
             <p>Something has gone wrong</p>
           ) : (
             <>
-              <p>It works!</p>
               {this.state.countries.map(country => (
                 <CountryCard country={country} />
               ))}
             </>
           )}
-        </div>
+        </>
       </Layout>
     )
   }

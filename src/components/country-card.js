@@ -3,8 +3,11 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const CountryCard = ({ country }) => (
-  <div className="card">
-    <img src={country.flag} />
+  <div className="country-card">
+    <div
+      className="country-flag"
+      style={{ backgroundImage: `url(${country.flag})` }}
+    />
     <h3>{country.name}</h3>
     <h4>Population</h4>
     <p>{country.population}</p>
