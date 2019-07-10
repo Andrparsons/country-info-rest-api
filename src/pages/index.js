@@ -32,7 +32,7 @@ class IndexPage extends Component {
           ) : (
             <>
               {this.state.countries.map(country => (
-                <CountryCard country={country} />
+                <CountryCard key={country.alpha3Code} country={country} />
               ))}
             </>
           )}
@@ -47,6 +47,7 @@ class IndexPage extends Component {
       .get("https://restcountries.eu/rest/v2/all")
       .then(response => {
         this.setState({ countries: response.data, loading: false })
+        console.log(this.state.countries)
       })
       .catch(error => {
         console.log(error)
